@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "build": "npx tsc",
-    "start": "node dist/index.js",
+   "build": "echo 'no build needed'",
+   "start": "npx prisma migrate deploy && npx ts-node src/index.ts",
+   "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev --name init",
     "prisma:seed": "ts-node prisma/seed.ts",
